@@ -110,6 +110,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="char.h" />
+    <ClInclude Include="list_node.h" />
+    <ClInclude Include="size_function.h" />
+    <ClInclude Include="stack.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="char.cpp" />
+    <ClCompile Include="list_node.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="size_function.cpp" />
+    <ClCompile Include="stack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
