@@ -114,6 +114,7 @@
     <ClInclude Include="list_node.h" />
     <ClInclude Include="size_function.h" />
     <ClInclude Include="stack.h" />
+    <ClInclude Include="string_test.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="char.cpp" />
@@ -121,6 +122,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="size_function.cpp" />
     <ClCompile Include="stack.cpp" />
+    <ClCompile Include="string_test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

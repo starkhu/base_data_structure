@@ -4,17 +4,20 @@
 #include"char.h"
 #include"list_node.h"
 #include"stack.h"
+#include"string_test.h"
 
 void PrintOptions() {
 	std::cout << "1: char_test" << std::endl;
 	std::cout << "2: size_test" << std::endl;
 	std::cout << "3: listnode_test" << std::endl;
 	std::cout << "4: stack_test" << std::endl;
+	std::cout << "5: string_test" << std::endl;
 }
 
 int main() {
 	PrintOptions();
 	char options;
+	std::cout << "please input your option:";
 	std::cin >> options;
 	while (options != 'q') {
 		switch (options) {
@@ -33,7 +36,12 @@ int main() {
 			break;
 		case '4':
 			StackTest();
+			break;
+		case '5':
+			StringTest();
+			break;
 		}
+		std::cout << "please input your option:";
 		std::cin >> options;
 	}
 	std::cout << "test completed" << std::endl;
