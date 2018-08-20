@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-#include<string.h>
+//#include<string.h>
 
 void StringTest() {
 	std::string str;
@@ -28,9 +28,10 @@ void StringTest() {
 		}
 		std::cout << str[i] << std::endl;
 	}
-	std::cout << "function strupr and strlwr: " << std::endl;
-	std::cout << strupr(const_cast<char*>(str.c_str())) << std::endl;
-	std::cout << strlwr(const_cast<char*>(str.c_str())) << std::endl;
+	std::cout << str << std::endl;
+	//std::cout << "function strupr and strlwr: " << std::endl;
+	//std::cout << strupr(const_cast<char*>(str.c_str())) << std::endl;
+	//std::cout << strlwr(const_cast<char*>(str.c_str())) << std::endl;
 
 
 }
