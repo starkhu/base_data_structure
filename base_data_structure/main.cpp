@@ -5,6 +5,7 @@
 #include"list_node.h"
 #include"stack.h"
 #include"string_test.h"
+#include"get_input.h"
 
 void PrintOptions() {
 	std::cout << "1: char_test" << std::endl;
@@ -12,6 +13,7 @@ void PrintOptions() {
 	std::cout << "3: listnode_test" << std::endl;
 	std::cout << "4: stack_test" << std::endl;
 	std::cout << "5: string_test" << std::endl;
+	std::cout << "6: get input test" << std::endl;
 }
 
 int main() {
@@ -39,6 +41,11 @@ int main() {
 			break;
 		case '5':
 			StringTest();
+			break;
+		case '6':
+			GetInput();
+			break;
+		default:
 			break;
 		}
 		std::cout << "please input your option:";

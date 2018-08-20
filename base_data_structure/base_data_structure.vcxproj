@@ -111,6 +111,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="char.h" />
+    <ClInclude Include="get_input.h" />
     <ClInclude Include="list_node.h" />
     <ClInclude Include="size_function.h" />
     <ClInclude Include="stack.h" />
@@ -118,6 +119,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="char.cpp" />
+    <ClCompile Include="get_input.cpp" />
+    <ClCompile Include="input.cpp" />
     <ClCompile Include="list_node.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="size_function.cpp" />
