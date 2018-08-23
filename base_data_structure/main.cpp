@@ -35,6 +35,10 @@ int main() {
 			AddToTail(head, 2);
 			RemoveNode(&head, 1);
 			PrintListNode(head);
+			AddToTail(head, 3);
+			AddToTail(head, 4);
+			DeleteSpecifiedNode(head, head->pNext);
+			PrintListNode(head);
 			break;
 		case '4':
 			StackTest();

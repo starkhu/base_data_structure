@@ -77,3 +77,29 @@ void RemoveNode(ListNode** head, int value) {
 	}  
 }
 
+// delete the specified node
+// the specified node must be in the list node.
+void DeleteSpecifiedNode(ListNode* pHead, ListNode* pToBeDeleted) {
+	if (!pHead && !pToBeDeleted)
+		return;
+	if (pToBeDeleted->pNext != nullptr) {
+		ListNode* temp = pToBeDeleted->pNext;
+		pToBeDeleted->value = temp->value;
+		pToBeDeleted->pNext = temp->pNext;
+		delete temp;
+		temp = nullptr;
+	}
+	else if (pHead == pToBeDeleted) {
+		delete pHead;
+		pHead = nullptr;
+	}
+	else {
+		ListNode* pNode = pHead;
+		while (pNode->pNext != pToBeDeleted)
+			pNode = pNode->pNext;
+		pNode->pNext = nullptr;
+		delete pNode->pNext;
+		pToBeDeleted = nullptr;
+	}
+}
+

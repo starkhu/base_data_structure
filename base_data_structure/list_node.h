@@ -7,3 +7,4 @@ ListNode* CreateListNode();
 void PrintListNode(ListNode* head);
 void AddToTail(ListNode* head, int value);
 void RemoveNode(ListNode** head, int value);
+void DeleteSpecifiedNode(ListNode* pHead, ListNode* pToBeDeleted);
