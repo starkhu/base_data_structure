@@ -13,4 +13,6 @@ void size_test() {
 	std::cout << "size of ListNode is: " << sizeof(ListNode) << std::endl;
 	std::cout << "size of int is: " << sizeof(char) << std::endl;
 	std::cout << "size of int* is: " << sizeof(int*) << std::endl;
+
+
 }
