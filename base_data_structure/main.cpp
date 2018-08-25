@@ -6,6 +6,7 @@
 #include"stack.h"
 #include"string_test.h"
 #include"get_input.h"
+#include"pointer_test.h"
 
 void PrintOptions() {
 	std::cout << "1: char_test" << std::endl;
@@ -14,6 +15,7 @@ void PrintOptions() {
 	std::cout << "4: stack_test" << std::endl;
 	std::cout << "5: string_test" << std::endl;
 	std::cout << "6: get input test" << std::endl;
+	std::cout << "7: pointer test" << std::endl;
 }
 
 int main() {
@@ -49,6 +51,8 @@ int main() {
 		case '6':
 			GetInput();
 			break;
+		case '7':
+			PointerTest();
 		default:
 			break;
 		}
