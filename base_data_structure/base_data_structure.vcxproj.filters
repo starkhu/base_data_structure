@@ -36,6 +36,9 @@
     <ClInclude Include="pointer_test.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="const_test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="char.cpp">
@@ -56,13 +59,16 @@
     <ClCompile Include="string_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="input.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="get_input.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="pointer_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="extern_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="const_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
