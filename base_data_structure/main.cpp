@@ -7,6 +7,9 @@
 #include"string_test.h"
 #include"get_input.h"
 #include"pointer_test.h"
+#include"const_test.h"
+
+extern int extern_value; //ÉùÃ÷±äÁ¿
 
 void PrintOptions() {
 	std::cout << "1: char_test" << std::endl;
@@ -16,6 +19,12 @@ void PrintOptions() {
 	std::cout << "5: string_test" << std::endl;
 	std::cout << "6: get input test" << std::endl;
 	std::cout << "7: pointer test" << std::endl;
+	std::cout << "8: extern test" << std::endl;
+	std::cout << "9: const_test" << std::endl;
+}
+
+void ExternTest() {
+	std::cout << "extern value is: " << extern_value << std::endl;
 }
 
 int main() {
@@ -27,6 +36,7 @@ int main() {
 		switch (options) {
 		case '1':
 			char_test();
+			CharTest();
 			break;
 		case '2':
 			size_test();
@@ -53,6 +63,10 @@ int main() {
 			break;
 		case '7':
 			PointerTest();
+		case '8':
+			ExternTest();
+		case '9':
+			ConstTest();
 		default:
 			break;
 		}

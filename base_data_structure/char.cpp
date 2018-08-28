@@ -1,5 +1,7 @@
 #include<iostream>
 
+//int extern_value = 10;
+
 void char_test() {
 	char str1[] = "hello world";
 	char str2[] = "hello world";
@@ -17,4 +19,11 @@ void char_test() {
 		std::cout << "str3 and str4 are same" << std::endl;
 	else
 		std::cout << "str3 and str4 are different" << std::endl;
+}
+
+void CharTest() {
+	char* str[] = { "aaa", "aaaaa", "a" };
+	//字符串数组存取方式采用了对齐原则，占用空间少的向占用空间多的靠齐
+	std::cout << "number of elements in the array: " 
+		<< sizeof(str) / sizeof(str[0]) << std::endl;
 }
