@@ -115,6 +115,7 @@
     <ClInclude Include="get_input.h" />
     <ClInclude Include="list_node.h" />
     <ClInclude Include="pointer_test.h" />
+    <ClInclude Include="set_output.h" />
     <ClInclude Include="size_function.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="string_test.h" />
@@ -127,6 +128,7 @@
     <ClCompile Include="list_node.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pointer_test.cpp" />
+    <ClCompile Include="set_output.cpp" />
     <ClCompile Include="size_function.cpp" />
     <ClCompile Include="stack.cpp" />
     <ClCompile Include="string_test.cpp" />

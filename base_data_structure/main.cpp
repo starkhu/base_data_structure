@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<map>
 #include"size_function.h"
 #include"char.h"
 #include"list_node.h"
@@ -8,8 +9,24 @@
 #include"get_input.h"
 #include"pointer_test.h"
 #include"const_test.h"
+#include"set_output.h"
 
 extern int extern_value; //声明变量
+
+static enum TestOption
+{
+	CharTest_,
+	SizeTest_,
+	ListNodeTest_,
+	StackTest_,
+	StringTest_,
+	InputTest_,
+	PointerTest_,
+	ExternTest_,
+	ConstTest_,
+	OutputTest_,
+	Quit_,
+};
 
 void PrintOptions() {
 	std::cout << "1: char_test" << std::endl;
@@ -21,27 +38,50 @@ void PrintOptions() {
 	std::cout << "7: pointer test" << std::endl;
 	std::cout << "8: extern test" << std::endl;
 	std::cout << "9: const_test" << std::endl;
+	std::cout << "10: set output format test" << std::endl;
 }
 
 void ExternTest() {
 	std::cout << "extern value is: " << extern_value << std::endl;
 }
 
+void NumberMapToFunction(std::map<std::string, enum TestOption>* test_map) {
+	test_map->insert(std::pair<std::string, enum TestOption>("1", CharTest_));
+	test_map->insert(std::map<std::string, enum TestOption>::value_type("2", SizeTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("3", ListNodeTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("4", StackTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("5", StringTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("6", InputTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("7", PointerTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("8", ExternTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("9", ConstTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("10", OutputTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("q", Quit_));
+}
 int main() {
 	PrintOptions();
-	char options;
+	std::string options;
+
+	std::map<std::string, enum TestOption> TestMap;
+	// TestMap["1"] = CharTest;
 	std::cout << "please input your option:";
 	std::cin >> options;
-	while (options != 'q') {
-		switch (options) {
-		case '1':
+	enum TestOption test_option;
+	NumberMapToFunction(&TestMap);
+	test_option = TestMap[options];
+	std::cout << "test option is: " << test_option << std::endl;
+	while (test_option != Quit_) {
+		std::cout << "test option is: " << test_option << std::endl;
+		switch (test_option) {
+		//case 不识别字符串
+		case CharTest_:
 			char_test();
 			CharTest();
 			break;
-		case '2':
+		case SizeTest_:
 			size_test();
 			break;
-		case '3':
+		case ListNodeTest_:
 			ListNode* head;
 			head = CreateListNode();
 			AddToTail(head, 2);
@@ -52,26 +92,33 @@ int main() {
 			DeleteSpecifiedNode(head, head->pNext);
 			PrintListNode(head);
 			break;
-		case '4':
+		case StackTest_:
 			StackTest();
 			break;
-		case '5':
+		case StringTest_:
 			StringTest();
 			break;
-		case '6':
+		case InputTest_:
 			GetInput();
 			break;
-		case '7':
+		case PointerTest_:
 			PointerTest();
-		case '8':
+			break;
+		case ExternTest_:
 			ExternTest();
-		case '9':
+			break;
+		case ConstTest_:
 			ConstTest();
+			break;
+		case OutputTest_:
+			SetOutputFormat();
+			break;
 		default:
 			break;
 		}
 		std::cout << "please input your option:";
 		std::cin >> options;
+		test_option = TestMap[options];
 	}
 	std::cout << "test completed" << std::endl;
 
