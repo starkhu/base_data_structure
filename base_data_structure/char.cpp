@@ -26,4 +26,13 @@ void CharTest() {
 	//字符串数组存取方式采用了对齐原则，占用空间少的向占用空间多的靠齐
 	std::cout << "number of elements in the array: " 
 		<< sizeof(str) / sizeof(str[0]) << std::endl;
+
+	char str1[3] = { 'a', 's' };
+	//如果初值个数小于数组长度,则只将这些字符赋绐数组中前面的元素
+	//其余元素自动定为空字符(即'/0')
+	for (int i = 0; i < 3; i++)
+		std::cout << str1[i] << std::endl;
+	str1[2] = 'h';
+	for (int i = 0; i < 3; i++)
+		std::cout << str1[i] << std::endl;
 }
