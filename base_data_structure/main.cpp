@@ -10,6 +10,7 @@
 #include"pointer_test.h"
 #include"const_test.h"
 #include"set_output.h"
+#include"map_test.h"
 
 extern int extern_value; //声明变量
 
@@ -25,6 +26,7 @@ static enum TestOption
 	ExternTest_,
 	ConstTest_,
 	OutputTest_,
+	MapTest_,
 	Quit_,
 };
 
@@ -39,6 +41,8 @@ void PrintOptions() {
 	std::cout << "8: extern test" << std::endl;
 	std::cout << "9: const_test" << std::endl;
 	std::cout << "10: set output format test" << std::endl;
+	std::cout << "11: map test" << std::endl;
+	std::cout << "q: quit" << std::endl;
 }
 
 void ExternTest() {
@@ -56,6 +60,7 @@ void NumberMapToFunction(std::map<std::string, enum TestOption>* test_map) {
 	test_map->insert(std::pair<std::string, enum TestOption>("8", ExternTest_));
 	test_map->insert(std::pair<std::string, enum TestOption>("9", ConstTest_));
 	test_map->insert(std::pair<std::string, enum TestOption>("10", OutputTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("11", MapTest_));
 	test_map->insert(std::pair<std::string, enum TestOption>("q", Quit_));
 }
 int main() {
@@ -69,9 +74,9 @@ int main() {
 	enum TestOption test_option;
 	NumberMapToFunction(&TestMap);
 	test_option = TestMap[options];
-	std::cout << "test option is: " << test_option << std::endl;
+	//std::cout << "test option is: " << test_option << std::endl;
 	while (test_option != Quit_) {
-		std::cout << "test option is: " << test_option << std::endl;
+		//std::cout << "test option is: " << test_option << std::endl;
 		switch (test_option) {
 		//case 不识别字符串
 		case CharTest_:
@@ -112,6 +117,9 @@ int main() {
 			break;
 		case OutputTest_:
 			SetOutputFormat();
+			break;
+		case MapTest_:
+			MapTest();
 			break;
 		default:
 			break;

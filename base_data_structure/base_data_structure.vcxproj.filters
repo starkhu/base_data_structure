@@ -42,6 +42,9 @@
     <ClInclude Include="set_output.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="map_test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="char.cpp">
@@ -75,6 +78,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="set_output.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="map_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
