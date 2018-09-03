@@ -134,6 +134,7 @@
     <ClCompile Include="size_function.cpp" />
     <ClCompile Include="stack.cpp" />
     <ClCompile Include="string_test.cpp" />
+    <ClCompile Include="variable.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
