@@ -10,7 +10,8 @@
 #include"pointer_test.h"
 #include"const_test.h"
 #include"set_output.h"
-#include"map_test.h"
+#include"stl_map_test.h"
+#include"stl_vector_test.h"
 
 extern int extern_value; //ÉùÃ÷±äÁ¿
 
@@ -27,6 +28,7 @@ static enum TestOption
 	ConstTest_,
 	OutputTest_,
 	MapTest_,
+	VectorTest_,
 	Quit_,
 };
 
@@ -42,6 +44,7 @@ void PrintOptions() {
 	std::cout << "9: const_test" << std::endl;
 	std::cout << "10: set output format test" << std::endl;
 	std::cout << "11: map test" << std::endl;
+	std::cout << "12: vector test" << std::endl;
 	std::cout << "q: quit" << std::endl;
 }
 
@@ -61,6 +64,7 @@ void NumberMapToFunction(std::map<std::string, enum TestOption>* test_map) {
 	test_map->insert(std::pair<std::string, enum TestOption>("9", ConstTest_));
 	test_map->insert(std::pair<std::string, enum TestOption>("10", OutputTest_));
 	test_map->insert(std::pair<std::string, enum TestOption>("11", MapTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("12", VectorTest_));
 	test_map->insert(std::pair<std::string, enum TestOption>("q", Quit_));
 }
 int main() {
@@ -120,6 +124,9 @@ int main() {
 			break;
 		case MapTest_:
 			MapTest();
+			break;
+		case VectorTest_:
+			VectorTest();
 			break;
 		default:
 			break;

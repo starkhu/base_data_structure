@@ -42,7 +42,10 @@
     <ClInclude Include="set_output.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="map_test.h">
+    <ClInclude Include="stl_map_test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stl_vector_test.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -80,10 +83,13 @@
     <ClCompile Include="set_output.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="map_test.cpp">
+    <ClCompile Include="variable.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="variable.cpp">
+    <ClCompile Include="stl_vector_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stl_map_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
