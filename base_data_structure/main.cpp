@@ -84,7 +84,6 @@ int main() {
 		switch (test_option) {
 		//case ²»Ê¶±ð×Ö·û´®
 		case CharTest_:
-			char_test();
 			CharTest();
 			break;
 		case SizeTest_:

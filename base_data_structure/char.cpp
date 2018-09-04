@@ -1,8 +1,8 @@
 #include<iostream>
+#pragma warning(disable:4996)
 
-//int extern_value = 10;
 
-void char_test() {
+void CharAndPointer() {
 	char str1[] = "hello world";
 	char str2[] = "hello world";
 	char* str3 = "hello world";
@@ -21,7 +21,7 @@ void char_test() {
 		std::cout << "str3 and str4 are different" << std::endl;
 }
 
-void CharTest() {
+void CharAlign() {
 	char* str[] = { "aaa", "aaaaa", "a" };
 	//字符串数组存取方式采用了对齐原则，占用空间少的向占用空间多的靠齐
 	std::cout << "number of elements in the array: " 
@@ -35,4 +35,21 @@ void CharTest() {
 	str1[2] = 'h';
 	for (int i = 0; i < 3; i++)
 		std::cout << str1[i] << std::endl;
+}
+
+//分割字符串 char* strtok(char *s, const char *delim)
+void CutString() {
+	char ch[] = "University of Science and Technology of China";
+	char *token_ptr = strtok(ch, " ");
+	while (token_ptr != NULL)
+	{
+		std::cout << token_ptr << std::endl;
+		token_ptr = strtok(NULL, " ");
+	}
+}
+
+void CharTest() {
+	CharAlign();
+	CharAndPointer();
+	CutString();
 }
