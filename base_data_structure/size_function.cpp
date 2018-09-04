@@ -11,8 +11,8 @@ void size_test() {
 	ListNode* pNode = new ListNode;
 	//指针占4个字节 
 	std::cout << "size of ListNode is: " << sizeof(ListNode) << std::endl;
-	std::cout << "size of int is: " << sizeof(char) << std::endl;
-	std::cout << "size of int* is: " << sizeof(int*) << std::endl;
+	std::cout << "size of char is: " << sizeof(char) << std::endl;
+	std::cout << "size of char* is: " << sizeof(char*) << std::endl;
 
 
 }
