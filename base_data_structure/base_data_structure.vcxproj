@@ -136,6 +136,7 @@
     <ClCompile Include="stack.cpp" />
     <ClCompile Include="stl_vector_test.cpp" />
     <ClCompile Include="string_test.cpp" />
+    <ClCompile Include="thread_test.cpp" />
     <ClCompile Include="variable.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
