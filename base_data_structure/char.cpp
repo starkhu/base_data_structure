@@ -1,7 +1,27 @@
+/*********************************************************************************
+*scanf()和gets()函数冲突问题
+*解决方案
+*方法1，用一句 while(getchar()!='\n');  
+        来处理掉缓冲区里的回车换行符，然后再gets()就正常了。
+*方法2，如果很明确地就知道缓冲区还留着这么个回车换行符，那就直接读入吧：
+        scanf("\n"); 或者getchar()读入一个字符，然后 接着gets()也就不会有问题了
+*********************************************************************************/
 #include<iostream>
 #include<string.h>
 #pragma warning(disable:4996)
 
+
+void SolveInputConflict() {
+	char a0[20], a1[20];
+	printf("please enter a0 and a1: ");
+	scanf("%s %s", a0, a1);
+	printf("a0 is %s, a1 is %s\n", a0, a1);
+	getchar();//用来接收换行符
+	printf("please enter str: ");
+	char str[100];
+	gets_s(str);
+	printf("str is %s\n", str);
+}
 
 void CharAndPointer() {
 	char str1[] = "hello world";
@@ -116,6 +136,7 @@ void StrToDoubleTest() {
 
 void CharTest() {
 	char str[] = "University of Science and Technology of China";
+	SolveInputConflict();
 	CharAlign();
 	CharAndPointer();
 	CutString();
