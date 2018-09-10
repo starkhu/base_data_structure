@@ -111,6 +111,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="char.h" />
+    <ClInclude Include="char_function.h" />
     <ClInclude Include="const_test.h" />
     <ClInclude Include="get_input.h" />
     <ClInclude Include="list_node.h" />
@@ -124,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="char.cpp" />
+    <ClCompile Include="char_function.cpp" />
     <ClCompile Include="const_test.cpp" />
     <ClCompile Include="extern_test.cpp" />
     <ClCompile Include="get_input.cpp" />
