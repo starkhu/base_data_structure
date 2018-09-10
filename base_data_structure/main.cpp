@@ -12,6 +12,7 @@
 #include"set_output.h"
 #include"stl_map_test.h"
 #include"stl_vector_test.h"
+#include"big_little_endian.h"
 
 extern int extern_value; //ÉùÃ÷±äÁ¿
 
@@ -29,6 +30,7 @@ static enum TestOption
 	OutputTest_,
 	MapTest_,
 	VectorTest_,
+	BigLittleTest_,
 	Quit_,
 };
 
@@ -45,6 +47,7 @@ void PrintOptions() {
 	std::cout << "10: set output format test" << std::endl;
 	std::cout << "11: map test" << std::endl;
 	std::cout << "12: vector test" << std::endl;
+	std::cout << "13: big little endian test" << std::endl;
 	std::cout << "q: quit" << std::endl;
 }
 
@@ -65,6 +68,7 @@ void NumberMapToFunction(std::map<std::string, enum TestOption>* test_map) {
 	test_map->insert(std::pair<std::string, enum TestOption>("10", OutputTest_));
 	test_map->insert(std::pair<std::string, enum TestOption>("11", MapTest_));
 	test_map->insert(std::pair<std::string, enum TestOption>("12", VectorTest_));
+	test_map->insert(std::pair<std::string, enum TestOption>("13", BigLittleTest_));
 	test_map->insert(std::pair<std::string, enum TestOption>("q", Quit_));
 }
 int main() {
@@ -127,6 +131,8 @@ int main() {
 		case VectorTest_:
 			VectorTest();
 			break;
+		case BigLittleTest_:
+			BigEndianTest();
 		default:
 			break;
 		}

@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="big_little_endian.h" />
     <ClInclude Include="char.h" />
     <ClInclude Include="char_function.h" />
     <ClInclude Include="const_test.h" />
@@ -124,6 +125,7 @@
     <ClInclude Include="string_test.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="big_little_endian.cpp" />
     <ClCompile Include="char.cpp" />
     <ClCompile Include="char_function.cpp" />
     <ClCompile Include="const_test.cpp" />
