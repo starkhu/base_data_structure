@@ -54,6 +54,9 @@
     <ClInclude Include="big_little_endian.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="class_test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="char.cpp">
@@ -105,6 +108,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="big_little_endian.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="class_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

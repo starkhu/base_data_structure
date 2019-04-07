@@ -113,6 +113,7 @@
     <ClInclude Include="big_little_endian.h" />
     <ClInclude Include="char.h" />
     <ClInclude Include="char_function.h" />
+    <ClInclude Include="class_test.h" />
     <ClInclude Include="const_test.h" />
     <ClInclude Include="get_input.h" />
     <ClInclude Include="list_node.h" />
@@ -128,6 +129,7 @@
     <ClCompile Include="big_little_endian.cpp" />
     <ClCompile Include="char.cpp" />
     <ClCompile Include="char_function.cpp" />
+    <ClCompile Include="class_test.cpp" />
     <ClCompile Include="const_test.cpp" />
     <ClCompile Include="extern_test.cpp" />
     <ClCompile Include="get_input.cpp" />
